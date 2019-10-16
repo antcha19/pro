@@ -23,19 +23,21 @@ public class ejercicio34 {
 		
 		//variables
 		
-		//junior
+	
 		double junior=950;
-		
-		//senior
 		double senior=1200;
-				
-		//jefe
 		double jefe=1600;
 				
 		int cargo;
 		int estadocivil;
 		int dias;
 		int dieta;
+		double sueldobruto=0.0;
+		double sueldoneto=0.0;
+		double irpf=0.0;
+		double soltero=0.20;
+		double casado=0.25;
+		double retencion;
 		
 		System.out.println("1 - Programador junior");
 		System.out.println("2 - Programador senior");
@@ -57,7 +59,7 @@ public class ejercicio34 {
 		System.out.println("");
 			
 		System.out.println("===============================");
-		
+		//sueldobase y dietas
 		if (cargo == 1) {
 			System.out.println("sueldo base\t" + junior);
 		}
@@ -69,10 +71,41 @@ public class ejercicio34 {
 		}
 		dieta= dias *30;
 		
-		System.out.println("dietas\t" + dieta );
+		System.out.println("dietas\t\t" + dieta );
+		//sueldo bruto
+		if (cargo == 1) {
+			sueldobruto=junior+dieta;
+			System.out.println("sueldo bruto\t" + sueldobruto);
+		}
+		else if (cargo == 2) {
+			sueldobruto=senior+dieta;
+			System.out.println("sueldo bruto\t" + sueldobruto);
+		}
+		else if (cargo == 3) {
+			sueldobruto=jefe+dieta;
+			System.out.println("sueldo bruto\t" + sueldobruto);
+		}
+		System.out.println("===============================");
 		
-		
-			
+		//retencion irpf
+		if (estadocivil == 1) {
+			irpf=sueldobruto*soltero;
+			System.out.println("retencion IRPF (20%)\t" + irpf);
+		}
+		else if (estadocivil == 2) {
+			irpf=sueldobruto*casado;
+			System.out.println("retencion IRPF (25%)\t" + irpf);
+		}
+		System.out.println("===============================");
+		//sueldo neto
+		if (estadocivil == 1) {
+			sueldoneto=sueldobruto-irpf;
+			System.out.println("sueldobruto\t\t" + sueldoneto);
+		}
+		else if (estadocivil == 2) {
+			sueldoneto=sueldobruto-irpf;
+			System.out.println("sueldobruto\t\t" + sueldoneto);
+		}
 		
 	}
 
