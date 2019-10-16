@@ -26,6 +26,7 @@ public class ejercicio28 {
 		System.out.println("introduzca el valor de la radio");
 		radio = sc.nextDouble();
 		
+		System.out.println("----------------------------------------------");
 				
 
 	}
