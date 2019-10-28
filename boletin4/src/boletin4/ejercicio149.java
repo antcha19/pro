@@ -31,7 +31,6 @@ public class ejercicio149 {
 		String numero;
 		int n=0;
 		
-		n=Integer.parseInt(numero);
 		
 
 	}
