@@ -20,8 +20,8 @@ public class ejercicio45 {
 		String b="b";
 		String c;
 		String d;
-		String curso;
-		int A=150;
+		String carnet;
+		String A;
 		int B=325;
 		int C=520;
 		int D=610;
@@ -39,7 +39,7 @@ public class ejercicio45 {
 		System.out.println("tipo de carnet");
 		curso = teclado.next();
 	
-			if (a == a) {
+			if (carnet == A) {
 				System.out.println("numero de practicas");
 				practicas = teclado.nextInt();
 				totalpractica=practicas*Apractica;
@@ -48,7 +48,7 @@ public class ejercicio45 {
 				System.out.println("te has gastado en total " + total);
 				
 				}
-			else if (b == b) {
+			else if (curso == B) {
 					System.out.println("numero de practicas"+ B );
 					practicas = teclado.nextInt();
 					totalpractica=practicas*Bpractica;
