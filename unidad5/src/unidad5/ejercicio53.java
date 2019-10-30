@@ -42,6 +42,6 @@ public class ejercicio53 {
 		System.out.println("introduzca el numero");
 		numero = teclado.nextInt();
 
-	}
+	
 
 }
