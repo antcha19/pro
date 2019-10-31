@@ -19,6 +19,8 @@ public class ejercicio53 {
 		int numeroaleatorio=0;
 		int numero=0;
 		int contador=0;
+		contador =1;
+		
 		numeroaleatorio = aleatorio.nextInt(100);
 		
 		//System.out.println(numeroaleatorio);
@@ -30,13 +32,16 @@ public class ejercicio53 {
 		while (numero != numeroaleatorio) { 					//mientras numero sea distinto a numeroaleatorio
 			
 			if(numeroaleatorio >= numero ) { 					//si numeroaleatorio es mayor a numero introducido
+				System.out.println("el juego del numero magica");
 				System.out.println("el numero es mayor");
 			}
-		else if (numeroaleatorio <= numero) { 					// //si numeroaleatorio es mayor a numero introducido
-			System.out.println("el numero es menor");
+			else if (numeroaleatorio <= numero) { 					// //si numeroaleatorio es mayor a numero introducido
+				System.out.println("el juego del numero magica");
+				System.out.println("el numero es menor");
 			}
+			contador++;
 		numero= teclado.nextInt();
-		contador++;
+		
 		
 	}
 		
