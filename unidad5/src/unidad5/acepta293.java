@@ -15,7 +15,6 @@ public class acepta293 {
         int insectos =6;
         int aracnidos = 8;
         int crustaceos =10;
-        int mira;
         int anillo=2;
 		int escolo=0;
         int veces=0;
