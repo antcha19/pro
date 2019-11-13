@@ -28,14 +28,15 @@ public class ejercicio53 {
 		System.out.println("el juego del numero magica");
 		System.out.println("introduzca el numero");
 		numero = teclado.nextInt();
-		
-		while (numero != numeroaleatorio) { 					//mientras numero sea distinto a numeroaleatorio
-			
-			if(numeroaleatorio >= numero ) { 					//si numeroaleatorio es mayor a numero introducido
+		//mientras numero sea distinto a numeroaleatorio
+		while (numero != numeroaleatorio) { 					
+			//si numeroaleatorio es mayor a numero introducido
+			if(numeroaleatorio >= numero ) { 				
 				System.out.println("el juego del numero magica");
 				System.out.println("el numero es mayor");
 			}
-			else if (numeroaleatorio <= numero) { 					// //si numeroaleatorio es mayor a numero introducido
+			// //si numeroaleatorio es mayor a numero introducido
+			else if (numeroaleatorio <= numero) { 					
 				System.out.println("el juego del numero magica");
 				System.out.println("el numero es menor");
 			}

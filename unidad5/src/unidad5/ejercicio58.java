@@ -26,8 +26,8 @@ public class ejercicio58 {
 		System.out.println("introduce numero de columna");
 		columna = teclado.nextInt();
 		
-		
-		int[][] matriz = new int [fila][columna]; 		//declaro la matriz 
+		//declaro la matriz
+		int[][] matriz = new int [fila][columna]; 		  
 		
 		
 		for (int i=0; i < fila; i++) {					
