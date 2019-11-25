@@ -28,6 +28,7 @@ public class ejercicio60 {
 		
 		numero = aleatorio.nextInt(28)+4;
 		System.out.print(numero);
+		
 	
 	}
 }

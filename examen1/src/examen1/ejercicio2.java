@@ -10,56 +10,101 @@ public class ejercicio2 {
 
 	public static void main(String[] args) {
 		
+		
+		int [][] laberinto = {{0,0,1,0},
+							  {1,0,0,0},
+							  {0,0,1,1},
+							  {1,0,0,0}};
+		char tecla=' ';
+		int posicionx=0;
+		int posiciony=0;
+		
 			
 		Scanner teclado = new Scanner(System.in);
 		
 			
 		System.out.println("bienvenido al laberento de Paco:");
 		System.out.println("pulse W para arriba, S para abajo, A para la izquierda y D para la derecha");
+		System.out.println("estas en la casilla" + posicionx + "," + posiciony + "cual es tu proximo movimiento");
+		tecla =teclado.next().charAt(0);
 		
-		
-		
-		int [][] posicion = new int [4][4];
-		
-		
-		
-		posicion [0][0] = 0;
-		posicion [0][1] = 0;
-		posicion [0][2] = 5;	//posicion pared
-		posicion [0][3] = 0;
-		posicion [1][0] = 5;	//posicion pared
-		posicion [1][1] = 0;
-		posicion [1][2] = 0;
-		posicion [1][3] = 0;
-		posicion [2][0] = 0;
-		posicion [2][1] = 0;
-		posicion [2][2] = 5;	//posicion pared
-		posicion [2][3] = 5;	//posicion pared
-		posicion [3][0] = 5;	//posicion pared
-		posicion [3][1] = 0;
-		posicion [3][2] = 0;
-		posicion [3][3] = 0;
-		
-		
-		// obtener el numero de filas y columnas de las matriz
-
-		int filas = posicion.length;
-		int columnas= posicion.length;
-		
-		// imprimir  
-		for (int i=0;i<filas;i++) {
-		 for(int j=0; j<columnas; j++)
+			while((posicionx !=3) || (posiciony !=3)) {
+				switch(tecla) {
+				case 'W':
+				case 'w':
+					System.out.println("has pulsado hacia arriba");
+						if (posicionx == 0) {
+							System.out.println("ERRROR!. Nos salimos del tablero!: ");
+						}
+						else if (laberinto[posicionx - 1][posiciony] == 1){ 
+							System.out.println("ERROR!. En esa dirección hay una pared!");
+						}
+						else {
+							posicionx--;
+						}
+						break;
+				case 'S':
+				case 's':
+					System.out.println("has pulsado hacia abajo");
+						if (posicionx == 3) {
+							System.out.println("ERRROR!. Nos salimos del tablero!: ");
+						}
+						else if (laberinto[posicionx + 1][posiciony] == 1){ 
+							System.out.println("ERROR!. En esa dirección hay una pared!");
+						}
+						else {
+							posicionx++;
+						}
+						break;
+				case 'A':
+				case 'a':
+					System.out.println("has pulsado hacia la izquierda");
+						if (posiciony ==0) {
+							System.out.println("ERRROR!. Nos salimos del tablero!: ");
+						}
+						else if (laberinto[posicionx ][posiciony -1] == 1){ 
+							System.out.println("ERROR!. En esa dirección hay una pared!");
+						}
+						else {
+							posiciony--;
+						}
+						break;
+				case 'D':
+				case 'd':
+					System.out.println("has pulsado hacia la izquierda");
+						if (posicionx ==3) {
+							System.out.println("ERRROR!. Nos salimos del tablero!: ");
+						}
+						else if (laberinto[posicionx][posiciony+1] == 1){ 
+							System.out.println("ERROR!. En esa dirección hay una pared!");
+						}
+						else {
+							posiciony++;
+						}
+						break;
+				default:
+					System.out.println("La letra " + tecla + " es incorrecta. Inténtelo de nuevo");
+					break;
+				
+				}	
 			
+			if ((posicionx != 3) || (posiciony != 3)) {
+					System.out.println("Estas en la casilla " + posicionx + "," + posiciony + ". ¿Cuál es tu próximo movimiento?");
+			            tecla = teclado.next().charAt(0);
+			        }
+			}//while
+			System.out.println("Enhorabuena!, has llegado a la casilla " + posicionx + "," + posiciony+ " y por tanto has llegado al final del laberinto!"); 
+		
 			
-			 if(posicion[0][0] != posicion[0][1])
-			 System.out.printf("has avanzado estas en la posision 0.1");
-		 	break;
 			}
-			 if(posicion[0][1] != posicion[0][2])
-			System.out.println("error . nos salimos del tablero");
-	}
-	
-	
+		
+		
+	}		
+		
+		
+		
+		
+		
 	
 
-}
+

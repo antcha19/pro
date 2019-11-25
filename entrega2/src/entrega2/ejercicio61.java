@@ -13,22 +13,22 @@ public class ejercicio61 {
 		Random aleatorio = new Random();	  // aleatorio
 		//variables 
 		int opcion=0;
-		int index=0;
+		int tamano=0;
 		int numero=0;
-		int respuesta1=0;
-		int respuesta2=0;
+	
+		int posicion_vector=0;
 		
 		System.out.println("Tamaño del vector ");
-    	index = teclado.nextInt();						//introduce el el tamono del vector
+    	tamano = teclado.nextInt();						//introduce el el tamono del vector
     	
     	// variables del vector
-    	int[] vector = new int [index];
-    	int filas =vector.length;
+    	int[] vector = new int [tamano];
+  
 		
     	
     			//menu
         
-			do{
+			while(opcion !=9) {
 				System.out.println("------------------------- pulse una opcion del menu---------------");
 		   		   System.out.println("1. rellenar vector por teclado");
 		           System.out.println("2. rellenar vector de forma aleatoria (numers de 1 a 100)");
@@ -43,59 +43,65 @@ public class ejercicio61 {
        
         switch(opcion){
             case (1):
-                   for(int i=0;i < filas ; i++) {
-            			System.out.println("introduzca valor " + i + " de " + index );
-            			vector[index-1]= teclado.nextInt();
-            	}
-           
-   			  System.out.print(vector[index-1]);
-   			   			 	 break;
+                   for(int i=0;i < vector.length ; i++) {
+            			System.out.println("introduzca valor " + (i+1) + " de " + tamano );
+            			vector[i]= teclado.nextInt();
+                   }
+			   	  break;
             case (2):
-            	System.out.println("2. rellenar vector de forma aleatoria (numers de 1 a 100)");
-            for (int i=0;i < vector.length;i++) {
-            	  numero = aleatorio.nextInt(100)+1;
-            	  vector [i] = numero;
-            	
-            }
-                break;
+	            
+	            	for (int i=0;i < vector.length;i++) {
+	            	  numero = aleatorio.nextInt(100)+1;
+	            	  vector [i] = numero; 
+	            	  }
+                		break;
             case (3):
-            	System.out.println("introduzca una posicon del vector0..n-1");
-            	respuesta1 =teclado.nextInt();
-            	System.out.println("el valor contenido en es :");
-            	respuesta2 =teclado.nextInt();
-            	vector [respuesta1]= respuesta2;
-                break;
+	            	System.out.println("introduzca una posicon del vector0..n-1");
+            		posicion_vector =teclado.nextInt();
+	            	if(posicion_vector > (vector.length -1)) {
+	            		System.out.println("posicion no encontrada en el vector");
+	            	} 
+	            	else {
+	            	System.out.println("que valor quiere introducir en la poscion" + posicion_vector + "?");
+	            	vector[posicion_vector]=teclado.nextInt();
+	            	}
+	                break;
             case (4):
             	System.out.println("introduzca la posicion");
-            	respuesta2 =teclado.nextInt();
-            	System.out.println(vector[respuesta2]);
+            	posicion_vector=teclado.nextInt();
+            	System.out.println(vector[posicion_vector]);
             	
                 break;
             case (5):
-            	  for (int i=0; i < vector.length; i++) {
-           			  System .out.print(vector[i]);
-           			 }
-           			 System .out.println("");	
-                
-                break;
+	            	 System .out.println("[");
+	            	  for (int i=0; i < vector.length; i++) {
+	            		  if (i==(vector.length -1 )) {
+	           			  System .out.print(vector[i]);
+	           			 }
+	            		  else {
+	           			 System .out.println(vector[i] + ", ");	
+	            		  }
+	            	  	}
+	            		  System.out.println("]");
+	                  break;
             case (6):
-               Arrays.sort(vector);
-            System.out.printf( "%s",Arrays.toString(vector));
-                
-                break;
-                   
-	
-            	case (7):
-            		break;
+		               Arrays.sort(vector);
+            			System.out.printf( "%s",Arrays.toString(vector));
+		                break;
+            case (9):
+            	System.out.printf( "gracias por utilizar este menu");
+            	break;
+            default:
+            	System.out.printf( "solo puedes pulsar una opcion  entre 1-5");
+            	break;
         }
 			}
+}//public
+}//class
+
 			
-			while (opcion != 9 );{
-			 System.out.println("Salir");
-			}
-			
-	}
-}
+	
+
 
 
 

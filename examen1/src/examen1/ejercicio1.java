@@ -25,49 +25,97 @@ public class ejercicio1 {
 		//variables
 		int filas; 
 		int columnas;
-		int x;
-		int y;
-	
-		
+		int cont=1;
+		int coste=0;
+		int costep=0;
+		int costea=0;
+		int costec=0;
+		int costeo=0;
+		int nump=0;
+		int numa=0;
+		int numc=0;
+		int numo=0;
+		int i=0;
+		int j=0;
 		
 			
 		//datos
-		Scanner teclado = new Scanner(System.in);
-		System.out.println("Introduzca doemnsiones de la bandera de paco:");		
-		filas = teclado.nextInt();
-		columnas = teclado.nextInt();
-		
-		
-		
-//		if (filas< 4 & columnas <4) {
-//			System.out.println("Introduzca x  es inferior a 4");
-//			x = teclado.nextInt();
-//			System.out.println("Introduzca y es inferior a 4");
-//			y = teclado.nextInt();
-//			
-//		} 
-//	
-		//matriz
-		int[][] matriz = new int[filas][columnas];
-		
-		//inicializamos matriz
-		for (int i=0; i < filas; i++) {					
-			 for (int j=0 ; j < columnas; j++) {
+		do {
+				Scanner teclado = new Scanner(System.in);
+				System.out.println("Introduzca doemnsiones de la bandera de paco:");		
+				filas = teclado.nextInt();
+				columnas = teclado.nextInt();
 				
-				 System.out.printf("paco", matriz[i][j]);
 				
-			 }
-			 
-			 
-			 System.out.printf("\n");
-			 
+				
+			   if (filas< 4 ) {
+					System.out.println("Introduzca x  es inferior a 4");
+			   }
+			   if (columnas< 4 ) {
+					System.out.println("Introduzca y es inferior a 4");
+			   } 
 		}
+		while ((filas  < 4) || (columnas < 4));
+	
+		
+		//rellena primera linea mas dos posiciones
+			for ( i=0; i < filas + 2; i++) {					
+				 System.out.print("@");
+					
+				 }
+				 System.out.println("");
+			  	 
+			//rellena el cuerpo de la bandera
+				 for(j =0;j < columnas; j++) {
+					 System.out.print("@");
+					 for ( i=0; i < filas ; i++) {
+						 switch(cont) {
+						 case 1: System.out.print("P");
+						 		 costep+=10;
+						 		 nump++;
+						 		 break;
+						 case 2: System.out.print("a");
+						 		 costea+=5;
+						 		 numa++;
+						 		 break;
+						 case 3: System.out.print("c");
+						 		 costec+=5;
+						 		 numc++;
+						 		 break;
+						 case 4: System.out.print("o"); 
+						 		 costeo+=5;
+						         numo++;
+						         break;
+						 }
+						 cont++;
+						 if (cont ==5) {
+							 cont =1;
+						 	}
+						 }
+					 System.out.println("@");
+				 }
+				 //rellenar la ultima linea de la bandera
+				 for(i=0; i<filas +2; i++) {
+					 System.out.print("@");
+				 }
+				 System.out.println("");
+			 
+				 //imprimir mensajes con los constes
+				 
+				 coste= costep+costea+costec+costeo;
+				 System.out.println("imprimir esta bandera costaria:" + coste + " € ya que hay que imprimir:");
+				 
+				 System.out.println(+nump+" letras P por valor de:" + costep + " € ");
+				 System.out.println(+numa+" letras a por valor de:" + costea + " € ");
+				 System.out.println(+numc+" letras c por valor de:" + costec + " € ");
+				 System.out.println(+numo+" letras o por valor de:" + costeo + " € ");
+	
 				
 					
 			 
-		}
 		
-		
+
+	}
 
 
 }
