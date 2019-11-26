@@ -1,3 +1,7 @@
+/*
+ * Antonio yepez 26112019
+ * */
+
 package unidad5;
 
 import java.util.*;
@@ -9,22 +13,42 @@ public class ejercicio54 {
 		Random aleatorio = new Random();
 		//variables 
 		int tamano=0;
-		int numero1=0;
-		int numero2=0;
-		int [] array = new int[tamano]; //creo el array
-		int numero=0;
+		int inferior=0;
+		int superior=0;
 		
+		
+		int suma=0;
+		
+		
+		//introducir tamano del array
 		System.out.println("introduce tamano del array");
 		tamano = teclado.nextInt();
 		
-		System.out.println(numero);
-		for (int i=0; i < tamano;i++) {
-			numero = aleatorio.nextInt(100);
-      	   array[i] = numero;
-      	   
-      
+		
+		System.out.println("introduce limite   inferior  y  superior para introducir numero aleatorios");
+		inferior = teclado.nextInt();
+		superior= teclado.nextInt();
+		
+		//creo el array
+
+		int vector[]  = new int[tamano]; 		
+		System.out.println("se ha generado el siguiente vector de " + tamano + " posiciones");
+		for (int i=0; i < vector.length;i++) {
 			
+			/*esta parte no entiendo por que va tamnao + inferior si yo 
+			 * he introducido que sean del 1 al 10  pregunta los numero aleatorios deberias ser del 1 al 10?
+			 * ejemplo captura 
+			 * 
+			*/
+			
+			vector[i] = (int)(aleatorio.nextDouble()*(superior-inferior+1)+ inferior);
+			
+			suma += vector[i];
+			 
+			System.out.println("["+vector[i]+"]");
 		}
+		System.out.println(" la suma de los elementos es: " +suma);
+		
 		
 		
 			 
