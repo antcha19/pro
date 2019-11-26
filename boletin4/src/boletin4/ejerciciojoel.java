@@ -25,13 +25,13 @@ public class ejerciciojoel {
 		
 		System.out.println("Bienvenido al juego de hundir la flot 6x6, introduzca su nombre:");
 		nombre=teclado.next();
-		System.out.println("Hola, Capitan "+ nombre +" . Dejeme que le ayude a configurar su fota," );
-		System.out.println("introduzca la posicion de su transatlantico numero " +contador1+" de " + contador3 + " o stop para introducir datos:" );
+		System.out.println("Hola, Capitan " + nombre +  " . Dejeme que le ayude a configurar su fota," );
+		System.out.println("introduzca la posicion de su transatlantico numero " + contador1 +" de 3 o stop para introducir datos:" );
 		
 		for (int i=0; i < tablero.length; i++) {					
 			 for (int j=0 ; j < tablero.length; j++) {
 				
-				 if( i==0 || j==0 || i==0+contador || j==0+contador) {
+				 if( i==0 || j==0 ) {
 					 System.out.print(t); 
 					 contador++;
 				 
