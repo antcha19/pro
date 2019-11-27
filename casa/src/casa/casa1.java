@@ -5,7 +5,7 @@ import java.util.*;
 public class casa1 {
 
 	public static void main(String[] args) {
-		 //reforzando hacer un bucle hacer un bucle
+		 //reforzando hacer un bucle 
 		Scanner teclado =new Scanner(System.in);
 		
 		

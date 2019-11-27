@@ -35,11 +35,7 @@ public class ejercicio54 {
 		System.out.println("se ha generado el siguiente vector de " + tamano + " posiciones");
 		for (int i=0; i < vector.length;i++) {
 			
-			/*esta parte no entiendo por que va tamnao + inferior si yo 
-			 * he introducido que sean del 1 al 10  pregunta los numero aleatorios deberias ser del 1 al 10?
-			 * ejemplo captura 
-			 * 
-			*/
+		
 			
 			vector[i] = (int)(aleatorio.nextDouble()*(superior-inferior+1)+ inferior);
 			
