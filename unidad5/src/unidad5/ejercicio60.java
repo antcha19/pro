@@ -27,7 +27,7 @@ public class ejercicio60 {
 		int index=0;
 		
 		//melodi = aleatorio.nextLine(28)+4;
-		System.out.print(numero);
+	//	System.out.print(numero);
 		
 	
 	}
