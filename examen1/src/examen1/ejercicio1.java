@@ -71,19 +71,19 @@ public class ejercicio1 {
 					 for ( i=0; i < filas ; i++) {
 						 switch(cont) {
 						 case 1: System.out.print("P");
-						 		 costep+=10;
+						 		 costep+=10;//contador de precio
 						 		 nump++;
 						 		 break;
 						 case 2: System.out.print("a");
-						 		 costea+=5;
+						 		 costea+=5;//contador de precio
 						 		 numa++;
 						 		 break;
 						 case 3: System.out.print("c");
-						 		 costec+=5;
+						 		 costec+=5;//contador de precio
 						 		 numc++;
 						 		 break;
 						 case 4: System.out.print("o"); 
-						 		 costeo+=5;
+						 		 costeo+=5;//contador de precio
 						         numo++;
 						         break;
 						 }

@@ -10,11 +10,12 @@ public class ejercicio2 {
 
 	public static void main(String[] args) {
 		
-		
+		//array de 2 dimensiones
 		int [][] laberinto = {{0,0,1,0},
 							  {1,0,0,0},
 							  {0,0,1,1},
 							  {1,0,0,0}};
+		
 		char tecla=' ';
 		int posicionx=0;
 		int posiciony=0;
@@ -26,7 +27,7 @@ public class ejercicio2 {
 		System.out.println("bienvenido al laberento de Paco:");
 		System.out.println("pulse W para arriba, S para abajo, A para la izquierda y D para la derecha");
 		System.out.println("estas en la casilla" + posicionx + "," + posiciony + "cual es tu proximo movimiento");
-		tecla =teclado.next().charAt(0);
+		tecla =teclado.next().charAt(0); //solo coge la primera tecla
 		
 			while((posicionx !=3) || (posiciony !=3)) {
 				switch(tecla) {

@@ -6,6 +6,7 @@ import java.util.*;
 public class hundirflota {
 
 	public static void main(String[] args) {
+		
 		Scanner sc = new Scanner(System.in);
 		char[][] tab = new char[6][6];
 		char[][] grum = new char[6][6];
