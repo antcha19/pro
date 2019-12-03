@@ -15,7 +15,7 @@ public class ejercicio74 {
 
 		System.out.println("iNTRODUZCA NOMBRE");
 		frase = teclado.nextLine();  //  escribir una frase  quue los espacios no los reconozca
-		caja(frase);
+		caja(frase.toUpperCase()); // MAYUSCULA
 
 		
 	}

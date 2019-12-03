@@ -54,7 +54,5 @@ public class ejercicio67 {
 		    }
 
 		}
-		
-	
-
 }
+//terminado

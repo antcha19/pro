@@ -33,9 +33,13 @@ public class ejercicio58 {
 		for (int i=0; i < fila; i++) {					
 			 for (int j=0 ; j < columna; j++) {
 				 System .out.printf("introducir datos para la posicon "+i+j);
+				 // el usuario va rellanando los valores de la matriz
 				 matriz[i][j]= teclado.nextInt();
 			 }
 		}
+		System.out.println("\nSu vector es: \n");
+		
+		//VOLVEMOS A HACER EL RECORRIDO PARA QUE IMPRIMA LOS VALORES QUE AHORA TIENE ALMACENADOS
 		for (int i=0; i < fila; i++) {
 			 for (int j=0 ; j < columna; j++) {
 				 System .out.print(matriz[i][j]);
@@ -46,3 +50,4 @@ public class ejercicio58 {
 
 	}
 }
+//terminado
