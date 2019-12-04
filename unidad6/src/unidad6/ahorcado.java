@@ -11,7 +11,7 @@ public class ahorcado {
 
 	public static void main(String[] args) {
 
-		int aleatorio;
+		
 
 		String[] palabras = { "telefono", "tiburon", "trabajo" };
 
@@ -20,14 +20,14 @@ public class ahorcado {
 		// palabra aleatoria
 		String palabra = palabras[posicionaleatorio];
 
-		System.out.println(palabra);
+		
 
 		// convierte un array en un string de letras
 		char[] letras = palabra.toCharArray();
 		char[] letrasconguiones = new char[letras.length];
 
 		for (int i = 0; i < letras.length; i++) {
-			letrasconguiones[i] = '_';
+			letrasconguiones[i] = '*';
 
 		}
 
@@ -39,7 +39,7 @@ public class ahorcado {
 			System.out.println("introduce una letra");
 
 			Scanner lector = new Scanner(System.in);
-			// cogo la primere letra de lector
+			// leo  la primere letra de lector
 			char letraintroducida = lector.next().charAt(0);
 
 			// si la letra introducida esta en la palabra
@@ -51,7 +51,7 @@ public class ahorcado {
 				}
 			}
 			if (Arrays.equals(letras, letrasconguiones)) {
-				System.out.println("has adivinado");
+				System.out.println("has adivinado pringado");
 			}
 			System.out.println(letrasconguiones);
 		}
