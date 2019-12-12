@@ -53,7 +53,7 @@ public class ejercicio78 {
 
 	
 		
-		while (letras != asterisco) {
+		do{
 			System.out.println("introduce una letra");
 
 			Scanner lector = new Scanner(System.in);
@@ -67,14 +67,17 @@ public class ejercicio78 {
 					asterisco[i] = letraintroducida;
 				}
 			} 
-			
+			contador++;
 			
 			if (Arrays.equals(letras, asterisco)) {
 			System.out.println("palabra adivinada! gracias por jugar al ahorcado");
 			}
 			System.out.println(asterisco);
 			
-		}
+		}while(contador <= 8);
+		
+	}
+	
 //			switch (error) {	
 //			case 1:
 //				System.out.println("Error  de 8: te pinto la hora");
@@ -111,6 +114,4 @@ public class ejercicio78 {
 //			}
 //
 	}
-
-}
 
