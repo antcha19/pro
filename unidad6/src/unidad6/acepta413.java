@@ -21,7 +21,7 @@ public class acepta413 {
 
 			altura = teclado.nextInt();
 			ancho = teclado.nextInt();
-			int super = an
+			//int super = an
 		}
 
 	}
