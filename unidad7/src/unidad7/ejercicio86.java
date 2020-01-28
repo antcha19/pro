@@ -21,11 +21,11 @@ public class ejercicio86 {
 		compañerosclase.add("Alex");
 		compañerosclase .add("Amrit");
 		
-		Iterator iter = compañerosclase.iterator();
+		Iterator bucle = compañerosclase.iterator();
 		//true si existen mas elementos
-		while (iter.hasNext())
+		while (bucle.hasNext())
 		//devuelve el elemento y apunta al siguiente
-			System.out.println(iter.next());
+			System.out.println(bucle.next());
 		
 		
 	}

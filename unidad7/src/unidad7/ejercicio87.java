@@ -22,46 +22,47 @@ public class ejercicio87 {
 		int suma = 0;
 		int media = 0;
 		int maximo = 0;
-		int minimo=0 ;
+		int minimo = 0;
 		boolean primeravez = false;
+
 		ArrayList<Integer> numerosaleatorio = new ArrayList();
 
 		Random aleatorio = new Random();
-		// genera aletoriamente las posicions de la Arraylista 
+		// genera aletoriamente las posicions de la Arraylista
 		int posicioneslista = aleatorio.nextInt(10) + 10;
-		
 
 		for (int i = 0; i < posicioneslista; i++) {
 			int numero = aleatorio.nextInt(100) + 1;
-			//suma de todos los numeros
+			// añade los numeros alateorios a la lista
+			numerosaleatorio.add(numero);
+			// suma de todos los numeros
 			suma = suma + numero;
-			//numero maximo 
+			// numero maximo
 			if (numero > maximo) {
 				maximo = numero;
 			}
-			//numero minimo
-			if(primeravez == false) {
+			// numero minimo
+			if (primeravez == false) {
 				minimo = numero;
 				primeravez = true;
 			}
 			if (numero < minimo) {
 				minimo = numero;
 			}
-			//añade los numeros alateorios a la lista
-			numerosaleatorio.add(numero);
+
 		}
-		
-		//media de la suma total
+
+		// media de la suma total
 		media = suma / posicioneslista;
-		
-		//imprimi toda la lista
+
+		// imprimi toda la lista
 		Iterator iter = numerosaleatorio.iterator();
 		// true si existen mas elementos
 		while (iter.hasNext()) {
 			// devuelve el elemento y apunta al siguiente
 			System.out.println(iter.next());
 		}
-		
+
 		System.out.println("posiciones:" + posicioneslista);
 		System.out.println("la suma es " + suma);
 		System.out.println("la numero maximo es " + maximo);
