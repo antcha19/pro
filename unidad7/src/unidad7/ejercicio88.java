@@ -27,32 +27,43 @@ public class ejercicio88 {
 		map.put("pepito", "zxcv");
 		map.put("andres", "qwert");
 		System.out.println(map);
-		int contador = 0;
-		String nombre;
+		int contadorcontrasena = 0;
+		int contadorusuario = 0;
+		String nombre = " ";
 		String contrasena = "";
 		String contrasenavalidada = "";
 
-		for (contador = 0; contador < 3; contador++) {
+		
+		 while (contadorcontrasena < 3 && contadorusuario < 3) {
+			System.out.println("introduce el nombre de usurario");
 			nombre = teclado.nextLine();
+
 			if (map.containsKey(nombre)) {
-				System.out.println("el usuario existe , introduce la contraseña");
-			}
-			else {
-				System.out.println("el usuario  no existe , vuelve a intentarlo");
+
+				while (contadorcontrasena < 3) {
+					System.out.println("introduce la contrasena");
+					contrasena = teclado.nextLine();
+					contrasenavalidada = map.get(nombre);
+					if (contrasenavalidada.equals(contrasena)) {
+						System.out.println(" ha accedido al area restringida");
+						break;
+					} else {
+						contadorcontrasena++;
+						if (contadorcontrasena == 3) {
+							System.out.println("tu cuenta esta bloqueada");
+						} else {
+								System.out.println("contrasena incorrecta");
+							}
+						}
+					}
 				
-			}
-				contrasena = teclado.nextLine();
-				contrasenavalidada = map.get(nombre);
-				if (contrasenavalidada.equals(contrasena)) {
-					System.out.println(" ha accedido al area restringida");
-					break;
-				} else {
-					System.out.println(" has intentado mas de 3 veces ,ya no puedes validar la cuenta");
+			}else {
+				contadorusuario++;
+				if (contadorusuario == 4) {
+					System.out.println("el usuario  no existe , vuelve a intentarlo");
 				}
 			}
-
-		
-	
-		contador++;
+		}
 	}
+
 }

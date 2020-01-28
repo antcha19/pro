@@ -17,38 +17,45 @@ public class ejercicio90 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Scanner teclado = new Scanner (System.in);
-		
-		String palabra=" ";
-		int contador =0;
-		
+		Scanner teclado = new Scanner(System.in);
+
+		String palabra = " ";
+	
+		int contador = 0;
+		int existe = 0;
+		int noexiste = 0;
+
 		HashMap<String, String> palabras = new HashMap<String, String>();
-		palabras.put("hola","hello");
-		palabras.put("sistema","system");
-		palabras.put("importar","import");
-		palabras.put("publico","public");
-		palabras.put("static","statico");
-		palabras.put("nuevo","new");
-		
-		
-		System.out.println("introduce la palabra en español");
-		palabra=teclado.next();
-		while(contador !=5) {
-		if(palabras.containsKey(palabra)) {
-			System.out.println("existe la palabra");
-			contador++;
-			
+		palabras.put("hola", "hello");
+		palabras.put("sistema", "system");
+		palabras.put("importar", "import");
+		palabras.put("publico", "public");
+		palabras.put("static", "statico");
+		palabras.put("nuevo", "new");
+
+		while (contador != 5) {
+			System.out.println("introduce la palabra en español");
+			palabra = teclado.nextLine();
+
+			if (palabras.containsKey(palabra)) {
+				System.out.println("existe la palabra");
+
+			} else {
+				System.out.println("no la tengo");
+			}
+
 			System.out.println("ahora dimelo en ingles");
-			palabra=teclado.next();
-			System.out.println(palabras.get(palabra));
+			palabra = teclado.nextLine();
+			if (palabras.containsValue(palabra) ) {
+				System.out.println("la palabra en ingles existe y es " + palabras.get(palabra));
+
+			} else {
+				System.out.println("no la tengo");
+			}
 			contador++;
-		}else {
-			System.out.println("no la tengo");
+			System.out.println(contador);
+			
 		}
-		}
-		System.out.println(contador);
 	}
-	
-	
 
 }
