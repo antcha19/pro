@@ -13,10 +13,14 @@ public class practica93 {
 		String personas = "";
 		
 		System.out.println("introduzca nombre para entrar separados por @,'nadie' para que no entre nadie o 'salir para finalizar el programa:'");
+		
+		
+		
 		//introduir datos en la cola
 		while(!personas.equals("salir")  ) {
 			personas = teclado.next();
 			cola.add(personas);
+			
 		if (personas.equals("salir")) {
 			break;
 		}
