@@ -26,10 +26,7 @@ public class ordenador {
 	}
 
 	public void apagar_ordenador() {
-		System.out.println("apago el ordenador");
+		System.out.println("apagamos ordenador con procesador " + procesador + " y memoria " + ram  +"  GB y disco de " + disco + "Gb");
 	}
-	// preguntar por que estatico
-	public  static void numerodeordenadores() {
-		System.out.println("de momento hemos creado " + ordenador.numerodeordenadores + " ordenadores");
-	}
+
 }
