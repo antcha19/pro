@@ -6,6 +6,7 @@ public class pizza {
 	private String tipopizza;
 	private String tamanopizza;
 	private String estado;
+	
 	static int cantidadpizza = 0;
 	static int totalservidas = 0;
 
@@ -14,6 +15,7 @@ public class pizza {
 		this.tipopizza = tipopizza;
 		this.tamanopizza = tamanopizza;
 		estado = "pedida";
+		
 		cantidadpizza++;
 	}
 
@@ -23,14 +25,18 @@ public class pizza {
 	}
 
 	public void servir() {
+		
 		if (estado.equals("Servida")) {
 			System.out.println("esta pizza ya se ha servido");
 
-		} else {
+		} 
+		else {
 			estado = "Servida";
 			cantidadpizza--;
 			totalservidas++;
+
 		}
+		
 	}
 
 }
