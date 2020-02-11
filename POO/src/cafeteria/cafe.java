@@ -34,8 +34,15 @@ public class cafe {
 	}
 
 	public void agregarcafe(int solicitarcafe) {
-			disponible = disponible + solicitarcafe;
-		System.out.println("agregamos  "+solicitarcafe+"cl y quedan en la cafetera" + disponible+"cl");
+
+		int posible = disponible + solicitarcafe;
+		if (posible >= disponible) {
+			System.out.println("La cantidad_actual es: " + disponible + "cl. en una cafetera de: " + disponible
+					+ "cl. No se puede agregar " + solicitarcafe + "cl. porque desbordaría la cafetera!");
+		} else {
+			disponible += solicitarcafe;
+			System.out.println("Agregamos " + solicitarcafe + "cl. y quedan en la cafetera " + disponible + "cl.");
+		}
 	}
 
 	public void vaciarcafetera() {
