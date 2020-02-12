@@ -22,8 +22,10 @@ public class airwyas {
 
 	}
 
-	void todos() {
+	public void todos() {
 		System.out.println(id+origen+destino+ida+vuelta);
 	}
+
+	
 
 }

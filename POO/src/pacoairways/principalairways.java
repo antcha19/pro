@@ -22,7 +22,7 @@ public class principalairways {
 			System.out.println("1.comprar billete de avion");
 			System.out.println("2.cancelar billete de avion");
 			System.out.println("3.estado de mi reserva");
-			System.out.println("s.salir");
+			System.out.println("5.salir");
 
 			System.out.println("Escribe una de las opciones");
 			opcion = teclado.nextInt();
@@ -43,7 +43,7 @@ public class principalairways {
 			
 				airwyas vuelos = new airwyas(id, origen, destino, ida, vuelta);
 				
-			//	vuelos = listavuelos ;
+				airwyas  aux ;
 				id++;
 				listavuelos.add(vuelos);
 
@@ -63,16 +63,17 @@ public class principalairways {
 				if (estado == 't' || estado == 'T') {
 					Iterator iter = listavuelos.iterator();
 					while(iter.hasNext()) {
-				//		aux = (listavuelos).iter.next();
+					aux = (airwyas)iter.next();
+					aux.todos;
 					}
 				}
 				break;
 
-			case 9:
+			case 5:
 				salir = true;
 				break;
 			default:
-				System.out.println("Solo números entre 1 y 5 . Pulsa el 9 para salir");
+				
 			}
 
 		}
