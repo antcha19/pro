@@ -9,13 +9,14 @@ public class principalairways {
 
 		Scanner teclado = new Scanner(System.in);
 		ArrayList<airwyas> listavuelos = new ArrayList<airwyas>();
-		
+
 		boolean salir = false;
 		String billete = "";
 		int id = 1;
 		int opcion;
-		int cancelar;
+		char cancelar;
 		char estado;
+		int buscar;
 
 		while (!salir) {
 
@@ -39,32 +40,71 @@ public class principalairways {
 				String destino = parte[1];
 				String ida = parte[2];
 				String vuelta = parte[3];
+
 				// creo y lo guardo
-			
 				airwyas vuelos = new airwyas(id, origen, destino, ida, vuelta);
-				
-				airwyas  aux ;
+				airwyas aux;
 				id++;
 				listavuelos.add(vuelos);
 
 				break;
 			case 2:
+				
+				//buscar identificador 
 				System.out.println("¿introduzca el id del billete a cancelar:?");
-				cancelar = teclado.nextInt();
-				cancelar = id;
+				buscar = teclado.nextInt();
 
-				listavuelos.remove(id);
+				airwyas identificador;
+				int id_devuelto = 0;
+				Iterator iter5 = listavuelos.iterator();
+				while (iter5.hasNext()) {
+					identificador = (airwyas) iter5.next();
+					id_devuelto = identificador.get_id();
+					if (id_devuelto == buscar) {
+						identificador.todos();
+					}
+				}
 
+				System.out.println("vuelo encontrado, confirma su cancelacion(S/N)");
+				cancelar = teclado.next().charAt(0);
+				if (cancelar == 's' || cancelar == 'S') {
+					Iterator iter6 = listavuelos.iterator();
+					while (iter6.hasNext()) {
+						identificador = (airwyas) iter6.next();
+						id_devuelto = identificador.get_id();
+						if (id_devuelto == buscar) {
+							identificador.cancelacion();
+						}
+					}
+				}
+				if (cancelar == 'n' || cancelar == 'N') {
+
+				}
 				break;
 			case 3:
-				
-				System.out.println("que vuelos desa ver? (V-vigentes)");
+
+				System.out.println("que vuelos desa ver? (V-vigentes, C-cancelados, T-todos)");
 				estado = teclado.next().charAt(0);
 				if (estado == 't' || estado == 'T') {
+
 					Iterator iter = listavuelos.iterator();
-					while(iter.hasNext()) {
-					aux = (airwyas)iter.next();
-					aux.todos;
+					while (iter.hasNext()) {
+						aux = (airwyas) iter.next();
+						aux.todos();
+					}
+				}
+				if (estado == 'v' || estado == 'V') {
+					Iterator iter1 = listavuelos.iterator();
+					while (iter1.hasNext()) {
+						aux = (airwyas) iter1.next();
+						aux.mostarvigente();
+					}
+				}
+				if (estado == 'C' || estado == 'c') {
+					Iterator iter2 = listavuelos.iterator();
+					while (iter2.hasNext()) {
+						aux = (airwyas) iter2.next();
+						aux.mostarcancelacion();
 					}
 				}
 				break;
@@ -73,7 +113,7 @@ public class principalairways {
 				salir = true;
 				break;
 			default:
-				
+
 			}
 
 		}
