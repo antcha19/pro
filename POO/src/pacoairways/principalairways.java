@@ -49,8 +49,8 @@ public class principalairways {
 
 				break;
 			case 2:
-				
-				//buscar identificador 
+
+				// busca identificador
 				System.out.println("¿introduzca el id del billete a cancelar:?");
 				buscar = teclado.nextInt();
 
@@ -107,6 +107,7 @@ public class principalairways {
 						aux.mostarcancelacion();
 					}
 				}
+
 				break;
 
 			case 5:

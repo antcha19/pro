@@ -31,30 +31,33 @@ public class airwyas {
 
 	public void cancelacion() {
 
-		estadodevuelo = "cancelado"; 
+		estadodevuelo = "cancelado";
 		System.out.println("ID del vuelo " + id + " Origen del vuelo: " + origen + " Destino del vuelo: " + destino
 				+ " Dia de ida: " + ida + " Dia de vuelta: " + vuelta + " " + estadodevuelo);
-		}
-		
+	}
+
 	public void mostarcancelacion() {
-		if(estadodevuelo == "cancelado") {
+		if (estadodevuelo == "cancelado") {
 			System.out.println("ID del vuelo " + id + " Origen del vuelo: " + origen + " Destino del vuelo: " + destino
 					+ " Dia de ida: " + ida + " Dia de vuelta: " + vuelta + " " + estadodevuelo);
+		} else if (!estadodevuelo.equals("cancelado")) {
+			System.out.println("no hay ningun vuelo cancelado");
 		}
+
 	}
+
 	public void mostarvigente() {
-		if(estadodevuelo == "vigente") {
+		if (estadodevuelo == "vigente") {
 			System.out.println("ID del vuelo " + id + " Origen del vuelo: " + origen + " Destino del vuelo: " + destino
 					+ " Dia de ida: " + ida + " Dia de vuelta: " + vuelta + " " + estadodevuelo);
+		} else if (!estadodevuelo.equals("vigente")) {
+			System.out.println("no hay ningun vuelo vigente");
 		}
+
 	}
-	
-	
 
 	public int get_id() {
 		return id;
 	}
-	
-
 
 }
