@@ -31,9 +31,15 @@ public class airwyas {
 
 	public void cancelacion() {
 
+		if(estadodevuelo.equals("cancelado")) {
+			System.out.println("Este vuelo ya esta cancelado ");
+		}
+		else {
 		estadodevuelo = "cancelado";
 		System.out.println("ID del vuelo " + id + " Origen del vuelo: " + origen + " Destino del vuelo: " + destino
 				+ " Dia de ida: " + ida + " Dia de vuelta: " + vuelta + " " + estadodevuelo);
+		}
+		
 	}
 
 	public void mostarcancelacion() {

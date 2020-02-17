@@ -49,13 +49,16 @@ public class principalairways {
 
 				break;
 			case 2:
+				
 
 				// busca identificador
 				System.out.println("¿introduzca el id del billete a cancelar:?");
 				buscar = teclado.nextInt();
-
+				//creo una variable auxiliar
 				airwyas identificador;
+				
 				int id_devuelto = 0;
+				//iterator para busca el id 
 				Iterator iter5 = listavuelos.iterator();
 				while (iter5.hasNext()) {
 					identificador = (airwyas) iter5.next();
