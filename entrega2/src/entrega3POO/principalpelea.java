@@ -18,9 +18,9 @@ public class principalpelea {
 		
 		
 
-		ken.inicio(ryu, templopekin);
-		mrbison.inicio(ken,bisonmansion);
-		ryu.inicio(ken, templopekin);
+		ken.pelea(ryu, templopekin);
+		mrbison.pelea(ken,bisonmansion);
+		ryu.pelea(ken, templopekin);
 		
 	//	ken.pelea(ryu);
 		

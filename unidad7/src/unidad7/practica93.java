@@ -6,45 +6,59 @@ public class practica93 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		Scanner teclado = new Scanner(System.in);
-		Queue<String> cola =new LinkedList<String>();
-		
-		String personas = "";
-		
-		System.out.println("introduzca nombre para entrar separados por @,'nadie' para que no entre nadie o 'salir para finalizar el programa:'");
-		
-		
-		
-		//introduir datos en la cola
-		while(!personas.equals("salir")  ) {
-			personas = teclado.next();
-			cola.add(personas);
-			
-		if (personas.equals("salir")) {
-			break;
+
+		Scanner s = new Scanner(System.in);
+		String nombres;
+		int salen;
+		Queue<String> cola = new LinkedList<String>();
+
+		while (true) {
+			System.out.println(
+					"Introduzca nombres para ENTRAR separados por @,'nadie' para que no entre nadie o 'salir' para finalizar el programa:");
+			nombres = s.nextLine();
+			if (nombres.equals("salir")) {
+				break;
+			}
+			if (!nombres.equals("nadie")) {
+				insertar_cola(nombres, cola);
+			}
+			System.out.println("Estado de la cola despues de ENTRAR:");
+			imprimir_cola(cola);
+			System.out.println("Introduzca numero de personas para SALIR de la cola:");
+			salen = s.nextInt();
+			s.nextLine();
+			while (salen > cola.size()) {
+				System.out.println("No pueden salir " + salen + " personas porque en la cola solo hay " + cola.size()
+						+ " personas.");
+				System.out.println("Introduzca numero de personas para SALIR de la cola:");
+				salen = s.nextInt();
+				s.nextLine();
+			}
+			borrar_cola(salen, cola);
+			System.out.println("Estado de la cola despues de SALIR:");
+			imprimir_cola(cola);
 		}
+	}
+
+	public static void insertar_cola(String nombres, Queue<String> cola) {
+		String[] nombres_array = nombres.split("@");
+		for (int i = 0; i < nombres_array.length; i++) {
+			cola.add(nombres_array[i]);
 		}
-		//mostar estado de la cola
+	}
+
+	public static void borrar_cola(int salen, Queue<String> cola) {
+		for (int i = 0; i < salen; i++) {
+			System.out.println("Sale de la cola " + cola.element());
+			cola.remove();
+		}
+	}
+
+	public static void imprimir_cola(Queue<String> cola) {
 		Iterator iter = cola.iterator();
 		while (iter.hasNext()) {
-			System.out.println(iter.next());
+			System.out.println("  " + iter.next());
 		}
-		//quitar una persona de la cola
-		System.out.println("introduce numero de personas para salir de la cola");
-		personas = teclado.next();
-	
-		cola.remove(personas);
-		System.out.println("estado de la cola despues de entrar:" );
-		Iterator iter1 = cola.iterator();
-		while (iter1.hasNext()) {
-			System.out.println(iter.next());
-		}
-		
-		
-		
-		
-		
 	}
 
 }
