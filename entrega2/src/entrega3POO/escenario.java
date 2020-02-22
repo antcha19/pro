@@ -1,10 +1,11 @@
 package entrega3POO;
 
+import java.util.Random;
+
 public class escenario {
 
-
 	
-	private String lugar ;
+private String lugar ;
 	
 	public escenario(String lugar) {
 		this.lugar = lugar;
@@ -17,6 +18,3 @@ public class escenario {
 	
 
 }
-
-
-

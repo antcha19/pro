@@ -37,9 +37,12 @@ public class ejercicio117 {
 			teclado.nextLine();
 			
 			while (i < numero ) { 
-				soy = teclado.next(); //guarda la primera palbra
-				nombre = teclado.next(); //guarda la segunda palabra despues del espacio
-				System.out.println("Hola, " + nombre + "."); // imprime la hola mas la variable nombre
+				//guarda la primera palbra
+				soy = teclado.next(); 
+				//guarda la segunda palabra despues del espacio
+				nombre = teclado.next(); 
+				// imprime la hola mas la variable nombre
+				System.out.println("Hola, " + nombre + "."); 
 				i++;
 			}    
 		        	
