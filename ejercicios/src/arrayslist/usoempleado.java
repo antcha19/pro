@@ -7,6 +7,7 @@ public class usoempleado {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		
 		/*
 		 * // array de 3 elementos empleado listaempleados[] = new empleado[3];
 		 * 
