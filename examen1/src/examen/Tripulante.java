@@ -13,7 +13,7 @@ public class Tripulante {
 		
 		
 	}
-	public String get_nombre() {
+	public String get_nombretripulante() {
 		return nombre;
 	}
 	public int get_edad() {

@@ -16,6 +16,8 @@ public class principal {
 		int edad;
 		String rango;
 		String flota;
+		String nombre_devuelto = "";
+		String flota_devuelta = "";
 
 		/// arraylis de nave, tripulante, flota
 		ArrayList<Nave> listanaves = new ArrayList<Nave>();
@@ -49,19 +51,44 @@ public class principal {
 				break;
 			case 2:
 
-				System.out.println("ntroduzca nombre de la nave donde desea dar de alta al tripulante:");
+				System.out.println("Introduzca nombre de la nave donde desea dar de alta al tripulante:");
 				teclado.nextLine();
 				nave = teclado.nextLine();
-				System.out.println("introduzca el nombre del tripulante para la nave " + nave + ":");
-				nombretripulante = teclado.nextLine();
-				System.out.println("ntroduzca la edad del nuevo tripulante:");
-				edad = teclado.nextInt();
-				System.out.println("ntroduzca su rango (Soldado, Capitan, Comandante):");
-				teclado.nextLine();
-				rango = teclado.nextLine();
 
-				listatripulantes.add(new Tripulante(nombretripulante, edad, rango));
+				
+				// creo una variable auxiliar
+				Nave buscar2 = null;
+				// buscar nave
+				Iterator iter2 = listanaves.iterator();
+				while (iter2.hasNext()) {
+					buscar2 = (Nave) iter2.next();
+					nombre_devuelto = buscar2.get_nombre();
+					if (nave.equalsIgnoreCase(buscar2.get_nombre())) {
+						buscar2.get_nombre();
+						System.out.println(buscar2.get_nombre());
+						break;
+					}
+					
+				}
+				if(nave != buscar2.get_nombre()) {
+					System.out.println("no existe");
+				
+				}
+				
+				while(buscar2.get_nombre() == buscar2.get_nombre()) {
+					System.out.println("introduzca el nombre del tripulante para la nave " + nave + ":");
+					nombretripulante = teclado.nextLine();
+					System.out.println("ntroduzca la edad del nuevo tripulante:");
+					edad = teclado.nextInt();
+					System.out.println("ntroduzca su rango (Soldado, Capitan, Comandante):");
+					teclado.nextLine();
+					rango = teclado.nextLine();
 
+					listatripulantes.add(new Tripulante(nombretripulante, edad, rango));
+					break;
+				}
+				
+			
 				break;
 			case 3:
 				System.out.println("introduzca nombre para su flota:");
@@ -79,10 +106,12 @@ public class principal {
 				break;
 
 			case 4:
+				// consultar estsdo de la nave
+
 				System.out.println("introduzca el nombre de la nave");
 				teclado.nextLine();
 				nave = teclado.nextLine();
-				String nombre_devuelto = "";
+
 				nombre_devuelto = nave;
 				// creo una variable auxiliar
 				Nave buscar;
@@ -101,10 +130,12 @@ public class principal {
 
 				break;
 			case 5:
+				// consultar estsdo de la flota
+
 				System.out.println("introduzca el nombre de la flota");
 				teclado.nextLine();
 				flota = teclado.nextLine();
-				String flota_devuelta = "";
+
 				flota_devuelta = flota;
 				// creo una variable auxiliar
 				Flota buscarflota;
@@ -115,7 +146,7 @@ public class principal {
 					flota_devuelta = buscarflota.get_nombre();
 					if (flota.equalsIgnoreCase(buscarflota.get_nombre())) {
 						buscarflota.get_nombre();
-						System.out.println(" existe " + flota);
+						System.out.println("la flota " + flota + "existe");
 						break;
 					}
 
