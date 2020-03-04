@@ -9,6 +9,7 @@ public class principal {
 
 		// variables
 		boolean salir = false;
+
 		int opcion = 1;
 		Scanner teclado = new Scanner(System.in);
 		String nave;
@@ -55,27 +56,30 @@ public class principal {
 				teclado.nextLine();
 				nave = teclado.nextLine();
 
-				
+				boolean encontrado = false;
 				// creo una variable auxiliar
 				Nave buscar2 = null;
 				// buscar nave
 				Iterator iter2 = listanaves.iterator();
 				while (iter2.hasNext()) {
+
 					buscar2 = (Nave) iter2.next();
 					nombre_devuelto = buscar2.get_nombre();
 					if (nave.equalsIgnoreCase(buscar2.get_nombre())) {
-						buscar2.get_nombre();
+						encontrado = true;
+						// buscar2.get_nombre();
 						System.out.println(buscar2.get_nombre());
 						break;
 					}
-					
+
 				}
-				if(nave != buscar2.get_nombre()) {
+
+				if (encontrado == false) {
 					System.out.println("no existe");
-				
+
 				}
-				
-				while(buscar2.get_nombre() == buscar2.get_nombre()) {
+				while (encontrado == true) {
+
 					System.out.println("introduzca el nombre del tripulante para la nave " + nave + ":");
 					nombretripulante = teclado.nextLine();
 					System.out.println("ntroduzca la edad del nuevo tripulante:");
@@ -85,10 +89,10 @@ public class principal {
 					rango = teclado.nextLine();
 
 					listatripulantes.add(new Tripulante(nombretripulante, edad, rango));
+
 					break;
 				}
-				
-			
+
 				break;
 			case 3:
 				System.out.println("introduzca nombre para su flota:");
@@ -125,7 +129,7 @@ public class principal {
 						System.out.println(" existe " + nave);
 						break;
 					}
-
+					
 				}
 
 				break;
