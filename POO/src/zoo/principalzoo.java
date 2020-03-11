@@ -7,7 +7,6 @@ public class principalzoo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		
 		Scanner teclado = new Scanner(System.in);
 		ArrayList<animales> listaanimal = new ArrayList<animales>();
 
@@ -15,7 +14,7 @@ public class principalzoo {
 		boolean salir = false;
 
 		while (!salir) {
-		
+
 			System.out.println("bienvenido al ZOO tigres & Leones");
 			System.out.println("---------------------------------");
 			System.out.println("1.Dar de alta animal");
@@ -66,19 +65,20 @@ public class principalzoo {
 
 	public static void numerico(int num) throws Exception {
 		Scanner teclado = new Scanner(System.in);
-		
+
 		if (num < 1 || num > 5) {
 			throw new Exception("Solo puedes introducir numeros del 1 al 5");
 		}
 	}
 
-	
-	 public static void nonumerico(int num) throws InputMismatchException { throw
-		 
-	  new InputMismatchException("haz introducido un dato no numero");
+	public static void nonumerico(int num) throws InputMismatchException { 
+	    
+		Scanner teclado = new Scanner(System.in);
+		
+		teclado.nextInt(); 
+		throw  new InputMismatchException("haz introducido un dato no numero");
 	  
 	  }
-	 
 
 	public static void tipoanimal(String tipo) throws Exception {
 		Scanner teclado = new Scanner(System.in);
@@ -88,9 +88,6 @@ public class principalzoo {
 		}
 	}
 
-	
-	
-	
 	public static void altaanimal(String tipo, ArrayList<animales> listaanimales) {
 		Scanner teclado = new Scanner(System.in);
 		teclado.nextInt();
