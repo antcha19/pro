@@ -42,7 +42,7 @@ public class ejercicio58 {
 		//VOLVEMOS A HACER EL RECORRIDO PARA QUE IMPRIMA LOS VALORES QUE AHORA TIENE ALMACENADOS
 		for (int i=0; i < fila; i++) {
 			 for (int j=0 ; j < columna; j++) {
-				 System .out.print(matriz[i][j]);
+				 System .out.print(matriz[i][0]);
 			 }
 			 System .out.println("\n");	
 
