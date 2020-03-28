@@ -11,6 +11,9 @@ public class principalzoo {
 		ArrayList<animales> listaanimal = new ArrayList<animales>();
 
 		int opcion = 0;
+		String tipo = "";
+		String nombre="";
+		int peso = 0;
 		boolean salir = false;
 
 		while (!salir) {
@@ -31,14 +34,15 @@ public class principalzoo {
 				// nonumerico(opcion);
 				switch (opcion) {
 				case 1:
-					String animal = "";
-					try {
-						System.out.println("introduzca el tipo de animal (l-leon, t-tigre)");
-						animal = teclado.nextLine();
-						tipoanimal(animal);
-					} catch (Exception e) {
-						System.out.println(e.getMessage());
-					}
+					animales animal = new animales(tipo,nombre,peso);
+					System.out.println("Introduzca el tipo de animal (l-leon, t-tigre):");
+					tipo = teclado.next();
+					System.out.println("Introduzca el nombre del animal (Sin incluir numeros!)");
+					nombre = teclado.next();
+					System.out.println("Introduzca el peso del animal:");
+					peso = teclado.nextInt();
+					listaanimal.add(animal);
+				
 
 					break;
 				case 2:
@@ -65,7 +69,7 @@ public class principalzoo {
 
 	public static void numerico(int num) throws Exception {
 		Scanner teclado = new Scanner(System.in);
-
+		teclado.nextInt(); 
 		if (num < 1 || num > 5) {
 			throw new Exception("Solo puedes introducir numeros del 1 al 5");
 		}
@@ -88,8 +92,5 @@ public class principalzoo {
 		}
 	}
 
-	public static void altaanimal(String tipo, ArrayList<animales> listaanimales) {
-		Scanner teclado = new Scanner(System.in);
-		teclado.nextInt();
-	}
+	
 }
