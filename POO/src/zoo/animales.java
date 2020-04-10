@@ -12,21 +12,22 @@ public class animales {
 		this.tipo = tipo;
 		this.nombre = nombre;
 		this.peso = peso;
-
-		// esto esta bien????
-
-		if (tipo.equals("l")) {
-			this.tipo = "leon";
-		} else if (tipo.equals("t")) {
-			this.tipo = "tigre";
-
-		}
+		
+		
+		
 
 	}
 
-	// no se porque me da ese error
-	public void datos_animal() {
-		System.out.println(tipo + nombre + peso);
+
+	
+	public String get_tipo(){
+		return tipo;
+	}
+	public String get_nombre() {
+		return nombre;
+	}
+	public int get_peso() {
+		return peso;
 	}
 
 }

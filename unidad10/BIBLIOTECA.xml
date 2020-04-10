@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<BIBLIOTECA>
+	<LIBRO>
+		<TITULO>LA REGENTA</TITULO>
+		<AUTOR>Leopoldo Alas Clarin</AUTOR>
+		<EDITORIAL>RBA Editores</EDITORIAL>
+		<ISBN>ISBN-33490</ISBN>
+		<NOTA>"4"</NOTA>
+		<COMENTARIOS>Es un clásico muy bueno</COMENTARIOS>
+	</LIBRO>
+	<LIBRO>
+		<TITULO>CIENFUEGOS</TITULO>
+		<AUTOR>Alberto Vazquez Figueroa</AUTOR>
+		<EDITORIAL>Plaza y Janes</EDITORIAL>
+		<ISBN>ISBN-12496</ISBN>
+		<NOTA>"9"</NOTA>
+		<COMENTARIOS>Un gran libro de aventuras</COMENTARIOS>
+	</LIBRO>
+	<LIBRO>
+		<TITULO>LOS SURCOS DEL AZAR</TITULO>
+		<AUTOR>Paco ROca</AUTOR>
+		<EDITORIAL>Ed Cartone</EDITORIAL>
+		<ISBN>ISBN-32111</ISBN>
+		<NOTA>"10"</NOTA>
+		<COMENTARIOS>La historia de La Nueve es espectacualar</COMENTARIOS>
+	</LIBRO>
+</BIBLIOTECA>

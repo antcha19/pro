@@ -17,7 +17,7 @@ public class libro {
 
 	public void mostaraltalibro() {
 
-		System.out.println(titulo + " escrito por: " + autor + " tiene " + paginas + " pags." + " | "+ estado);
+		System.out.println(titulo + " escrito por: " + autor + " tiene " + paginas + " pags." + " | " + estado);
 	}
 
 	public String get_titulo() {
@@ -34,5 +34,13 @@ public class libro {
 
 	public String get_estado() {
 		return estado;
+	}
+
+	public void cambiar_estado() {
+		if (estado.equals("DISP")) {
+			estado = "PREST";
+		} else {
+			estado = "DISP";
+		}
 	}
 }

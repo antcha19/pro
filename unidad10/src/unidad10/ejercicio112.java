@@ -54,7 +54,7 @@ public class ejercicio112 {
 			file5.write("Paco: Hola " + nombre + " ¿como estas hoy?" + "\n");
 			while (!vete) {
 				file5.write(frase = teclado.nextLine() + "\n");
-					/// 
+					//si en la frase encuentra un vete sale del bucl y termina
 				if(frase.contains("vete")) {
 					break;
 				}

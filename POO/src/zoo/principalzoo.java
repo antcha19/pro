@@ -8,13 +8,19 @@ public class principalzoo {
 		// TODO Auto-generated method stub
 
 		Scanner teclado = new Scanner(System.in);
+		
 		ArrayList<animales> listaanimal = new ArrayList<animales>();
-
-		int opcion = 0;
+		
+		
 		String tipo = "";
 		String nombre="";
 		int peso = 0;
+		animales animal = new animales(tipo,nombre,peso);
+		
+		int opcion = 0;
+		
 		boolean salir = false;
+		
 
 		while (!salir) {
 
@@ -30,13 +36,14 @@ public class principalzoo {
 				opcion = teclado.nextInt();
 
 				// llama al metodo numerico
-				numerico(opcion);
+			//	numerico(opcion);
 				// nonumerico(opcion);
 				switch (opcion) {
 				case 1:
-					animales animal = new animales(tipo,nombre,peso);
+					
 					System.out.println("Introduzca el tipo de animal (l-leon, t-tigre):");
 					tipo = teclado.next();
+					
 					System.out.println("Introduzca el nombre del animal (Sin incluir numeros!)");
 					nombre = teclado.next();
 					System.out.println("Introduzca el peso del animal:");
@@ -52,7 +59,7 @@ public class principalzoo {
 
 					break;
 				case 4:
-
+					
 					break;
 				case 5:
 					salir = true;
