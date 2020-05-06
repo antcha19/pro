@@ -35,7 +35,7 @@ public class multimedia {
 	que el título y el autor sean iguales a los del objeto que llama al método y false en caso contrario.*/
 	public boolean equals(multimedia m) {
 
-		if ((this.titulo).equals(m.titulo) || (this.autor).equals(m.titulo)) {
+		if ((this.titulo).equals(m.getTitulo()) || (this.autor).equals(m.getAutor())) {
 			return true;
 		} else {
 			return false;
