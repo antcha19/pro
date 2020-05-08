@@ -155,8 +155,12 @@ public class principal {
 				serie auxseriependiente;
 				Iterator iter2pendiente = listaseries.iterator();
 				while (iter2pendiente.hasNext()) {
+					boolean falso= false;
 					auxseriependiente = (serie) iter2pendiente.next();
-					auxseriependiente.mostrarserie();
+					falso=auxseriependiente.getVisto();
+					if(falso==false) {
+						auxseriependiente.mostrarserie();
+					}
 				}
 
 				break;

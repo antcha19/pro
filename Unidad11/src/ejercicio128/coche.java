@@ -5,8 +5,8 @@ public class coche extends vehiculo{
 	private int puertas;
 	
 	//constructor 
-	public coche(int matricula,int velocidad, int puertas) {
-		super(matricula, velocidad);
+	public coche(String matricula, int puertas) {
+		super(matricula);
 		this.puertas=puertas;
 	}
 

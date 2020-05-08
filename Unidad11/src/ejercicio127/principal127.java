@@ -69,12 +69,10 @@ public class principal127 {
 			nombre = teclado.nextLine();
 			switch (tipo) {
 			case "p":
-
 				perro p1 = new perro(nombre);
 				listamascotas.add(p1);
 				System.out.println("Se ha dado de alta a un perro de nombre " + nombre);
 				break;
-
 			case "g":
 				gato p2 = new gato(nombre);
 				listamascotas.add(p2);
@@ -92,7 +90,7 @@ public class principal127 {
 				break;
 
 			}
-			// break;
+			
 
 		}
 

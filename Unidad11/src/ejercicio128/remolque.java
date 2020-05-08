@@ -12,5 +12,8 @@ public class remolque {
 		return "+peso+";
 	}
 
+	public int getPeso() {
+		return peso;
+	}
 	
 }

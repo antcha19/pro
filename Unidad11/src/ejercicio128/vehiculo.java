@@ -2,10 +2,10 @@ package ejercicio128;
 
 public class vehiculo {
 	
-	protected int matricula = 0;
-	protected int velocidad = 0;
+	protected String matricula ;
+	protected double velocidad = 0;
 	
-	public vehiculo(int matricula,int velocidad) {
+	public vehiculo(String matricula) {
 		this.matricula=matricula;
 		this.velocidad=velocidad;
 	}
@@ -16,5 +16,9 @@ public class vehiculo {
 		 return " (" + matricula + "|" + velocidad + "km/h";
 		 
 	}
+	
+	public void acelerar(double velo) throws Exception {
+		 velocidad = velocidad + velo;
+		 }
 	
 }
