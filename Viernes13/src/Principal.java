@@ -12,10 +12,10 @@ public class Principal {
 		int nota = -1;
 
 		// crea un alumno
-		Alumno a1 = new Alumno("1A", "Antonio", "Yepez", 29, "1DAM");
-		listaalumno.add(a1);
+		Alumno alumno1 = new Alumno("1A", "Antonio", "Yepez", 29, "1DAM");
+		listaalumno.add(alumno1);
 		// primer metodo
-		a1.datosalumno();
+		alumno1.datosalumno();
 
 		// segundo metodo necesita el system.out para imprimir
 		Alumno a2 = new Alumno("1B", "Axel", "Antunez", 60, "1DAM");
@@ -23,12 +23,12 @@ public class Principal {
 		System.out.println(a2.datos_alumno());
 
 		// crea una asignatura
-		asignatura as1 = new asignatura("programacion", 256, "La Biblia", "Paco Perez");
-		as1.datosasignatura();
-		listaasignaturas.add(as1);
+		asignatura asignatura1 = new asignatura("programacion", 256, "La Biblia", "Paco Perez");
+		asignatura1.datosasignatura();
+		listaasignaturas.add(asignatura1);
 
 		// matricula un alumno de una asignatura
-		a1.matricular(as1);
+		alumno1.matricular(asignatura1);
 
 		// creo otra asignatura
 		asignatura as2 = new asignatura("BBDD", 100, "Libro de Lucia", "Lucia Gimeno");
@@ -55,7 +55,7 @@ public class Principal {
 
 		System.out.println("la nota es :" + nota);
 
-		examen e1 = new examen(a1, as1, nota);
+		examen e1 = new examen(alumno1, asignatura1, nota);
 		
 		Alumno aluaux = e1.getAlumno();
 		asignatura asigaux = e1.getasignatura();
