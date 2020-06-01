@@ -15,10 +15,12 @@ public class Mesa  implements Interface_Mesa{
 	protected Estado estado;
 	private String ubicacion;
 	private double factura;
+	private int idmesa;
 	private ArrayList<Plato> listaplatos = new ArrayList<Plato>();
 
-	public Mesa(int numeroMesa, String ubicacion) {
+	public Mesa(int numPersonaMesa, String ubicacion) {
 		numMesa ++;
+		this.idmesa =numMesa;
 		this.numeroMesa = numeroMesa;
 		this.numPersonaMesa = numPersonaMesa;
 		this.estado =estado.LIBRE;
@@ -30,12 +32,16 @@ public class Mesa  implements Interface_Mesa{
 	
 
 	public String obtenerDatosMesa() {
-	String 	datos = numeroMesa + " | "+ numPersonaMesa +" | " + ubicacion + " | " +estado; 
+	String 	datos = idmesa + " | "+ numPersonaMesa +" | " + ubicacion + " | " +estado; 
 		return datos;
 	}
 
 	public int getNumMesa() {
 		return numMesa;
+	}
+	
+	public int getIdmesa() {
+		return idmesa;
 	}
 	
 	public void liberarMesa() {
@@ -69,10 +75,9 @@ public class Mesa  implements Interface_Mesa{
 		Iterator iter = listaplatos.iterator();
 		while(iter.hasNext()) {
 			aux =(Plato) iter.next();
-			System.out.println(aux.getPrecio());
+			
 			total = total + aux.getPrecio();
 		}
-		
 		return total;
 	}
 	
